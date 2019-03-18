@@ -1,0 +1,3 @@
+.navs {background-color:#111; color:#fff;}
+.navs > ul > li {width:25%; float:left; text-align:center; padding: 1rem 2rem; cursor:pointer;}
+.navs> ul > li.navs:hover {background-color: #999999; padding: 1rem 0; color: black;}

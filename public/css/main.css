@@ -1,0 +1,153 @@
+/***** 공통사항 *****/
+
+.wrap {width: 96%; margin: auto; max-width: 960px;}
+.page {padding: 3rem; color: #666;}
+.page > h3.tit {text-align: center; margin-bottom: 1.5rem;}
+.page > i.cmt {text-align: center; margin-bottom: 1.5rem; display: block;}
+.page > p.cont {text-align: justify; line-height: 1.75rem; margin-bottom: 1.5rem;}
+
+
+/***** .navs *****/
+.navs {width: 100%; position: fixed; z-index: 9999; color:#666;}
+.navs > ul {float: left;}
+.navs > ul > li.nav {float: left; padding: 1rem 1.25rem; cursor: pointer;}
+.navs > ul > li.nav:hover {background-color: #ccc; color:#111;}
+.navs > ul > li.nav > i {margin-right: 0.5rem;}
+.navs > div.search {float: right; padding: 1rem 1.25rem; color:#999;}
+.navs > div.search:hover {background-color: #f10; color: #fff; cursor: pointer;}
+.navs > div.hamburger {float: right; padding: 1rem 1.25rem; color:#999; display: none;}
+.navs > div.hamburger:hover {background-color: #111; color: #fff; cursor: pointer;}
+.navs-shadow {background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	color:#111 !important;}
+.nav_sub {width: 100%; position: fixed; top: 3.15rem; background: #fff; z-index: 9998; display: none;}
+.nav_sub > li {padding:1rem 1.5rem; color: #000;}
+
+/***** .mains *****/
+/* 
+background:
+컬러__
+이미지(url)__
+반복방법(repeat(기), repeat-x, repeat-y, no-repeat)__
+좌우위치(left(기), center, right, px, %, rem...)__
+상하위치(top(기), center, bottom, px, %, rem...)
+*/
+.mains {width: 100%; height: 50%; position: relative; opacity: 0.8;
+/* background: url(../img/p1.jpg) no-repeat center; */
+background-image: url(../img/parallax1.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+}
+.main_tit {position: absolute; color: #fff; background-color: #222; font-size: 2rem; 
+	padding: 0.75rem 1rem; left: 50%; top: 50%; transform: translate(-50%, 200%); opacity: 0; transition: all 2s;}
+.main_tit:after {content: "MY WEBSITE LOGO"; letter-spacing: 0.25rem;}
+
+/***** .abouts *****/
+.about {font-size: 1rem;}
+.about > .about_pic {width: 50%; float: left; padding: 3%; opacity: 0; transform: translateX(-200px); transition: all 2s;}
+.about > .about_pic > .tit {text-align: center; font-size: 1em; margin-bottom: 1.5em;}
+.about > .about_pic > img {opacity: 0.5; transition: all 1s ease-in-out;}
+.about > .about_pic > img:hover {opacity: 1; transform: scale(1.2); }
+.about > .about_cont {width: 50%; float: right; padding: 3%; line-height: 1.5em; text-align: justify; opacity: 0; transform: translateX(200px); transition: all 2s; transition-delay: 0.5s;}
+.skills > .tit {font-size: 1.125rem; text-align: center; padding: 2rem 0;}
+.skills .skill_tit {letter-spacing: 0.5rem; padding: 1rem 0;}
+.skills .skill_graph {background-color: #ccc; margin-bottom: 1rem;}
+.skills .skill_bar {background-color: #333; color:#f1f1f1; text-align: center; 
+	padding: 0.5rem 0; width: 10%; transition: width 2s;}
+/*
+.skills > .cont > :nth-child(2) > .skill_bar:hover {animation-name: barAni1; animation-duration: 2s; animation-fill-mode: forwards;}
+.skills > .cont > :nth-child(4) > .skill_bar:hover {animation-name: barAni2; animation-duration: 2s; animation-fill-mode: forwards;}
+.skills > .cont > :nth-child(6) > .skill_bar:hover {animation-name: barAni3; animation-duration: 2s; animation-fill-mode: forwards;}
+@keyframes barAni1 {
+	from {width:50%;}
+	to {width: 90%;}
+}
+@keyframes barAni2 {
+	from {width:10%;}
+	to {width: 80%;}
+}
+@keyframes barAni3 {
+	from {width:10%;}
+	to {width: 85%;}
+}
+*/
+
+/***** .history *****/
+.history {margin-top: 2rem; background-color: #555; color: #f1f1f1;}
+.history > li {width: 25%; float: left; text-align: center; padding: 2rem 0;}
+.history > li > h4 {padding: 0.5rem 0;}
+.history > li > p {padding-bottom: 0.5rem;}
+
+/***** .ports *****/
+.ports > .banner {width: 100%; height: 400px; text-align: center; opacity: 0.8;
+	background: url(../img/parallax2.jpg) no-repeat center top; 
+	background-attachment: fixed; 
+	background-size: cover;}
+.ports > .banner	> h2 {line-height: 400px; color: #f1f1f1; letter-spacing: 0.5rem;}
+.works > ul {margin-top: 2rem;}
+.works > ul > li.work {float: left; width: 25%; padding: 1%; cursor: pointer; transition: all 2s; opacity: 0; transform: scale(0);}
+.works > ul > li.work:hover {opacity: 0.8;}
+.works > .bts {padding:2rem 0; text-align: center;}
+.works > .bts > .bt_more {background-color: #eee; padding: 0.75rem 1.25rem;}
+.works > .bts > .bt_more:hover {background-color: #bbb;}
+
+/***** .contacts *****/
+.contacts > .banner {width: 100%; height: 400px; text-align: center; opacity: 0.8;
+	background: url(../img/parallax3.jpg) no-repeat center; 
+	background-attachment: fixed; 
+	background-size: cover;}
+.contacts > .banner	> h2 {line-height: 400px; color: #f1f1f1; letter-spacing: 0.5rem;}
+.loc {margin-top: 1rem;}
+.loc > .loc_pic {float: left; width: 40%; padding: 2%; transition: all 2s; opacity: 0; transform: translateY(-100%);}
+.loc > .loc_pic > img {border-radius: 0.5rem;}
+.loc > .loc_cont {float: left; width: 60%; padding: 2%; transition: all 2s; opacity: 0; transform: translateY(100%); transition-delay: 1s;}
+.loc > .loc_cont > li {padding: 0.5rem 0;}
+.loc > .loc_cont > .city, 
+.loc > .loc_cont > .phone, 
+.loc > .loc_cont > .email {font-size: 1.25rem;}
+.loc > .loc_cont > .cmt {margin: 0.5rem 0;}
+.contact_form > input {padding: 0.5rem; border: 1px solid #aaa; 
+	margin: 0.25rem 0.125rem;}
+.contact_form > .name,	
+.contact_form > .email {width: calc(50% - 0.5rem);}	
+.contact_form > .msg {width: calc(100% - 0.5rem);}
+.contact_form > .bt_send {float: right; padding: 0.75rem 1.25rem; background-color: #111; color: #f1f1f1; margin-right: 0.5rem; margin-top: 1rem;}
+.contact_form > .bt_send:hover {background-color: #bbb; color: #111;}
+
+/***** .footers *****/
+footer {text-align: center; padding: 3rem 0; background-color: #777;}
+footer:hover {background-color: #111;}
+footer > .sns {color: #f1f1f1; font-size: 1.5rem; padding: 2rem 0;}
+footer > .sns > i {cursor: pointer;}
+footer > .sns > i:hover {color: orange;}
+footer > .copyright {color: #f1f1f1;}
+
+
+/***** 반응형 *****/
+@media screen and (max-width: 1024px) {
+	
+}
+
+@media screen and (max-width: 768px) {
+	.navs > div.search {display: none;}
+	.navs > div.hamburger {display: block;}
+	.navs > ul > li:not(:first-child) {display: none;}
+	.main_tit:after {content: "MY LOGO"; letter-spacing: 0.25rem;}
+	.about > .about_pic {width: 100%;}
+	.about > .about_cont {display: none;}
+	.history > li {width: 100%;}
+	.works > ul > li.work {width: 50%;}
+	.loc > .loc_pic {width: 100%;}
+	.loc > .loc_cont {width: 100%;}
+	.contact_form > .name,	
+	.contact_form > .email {width: calc(100% - 0.5rem);}
+}
+
+@media screen and (max-width: 480px) {
+	.works > ul > li.work {width: 100%;}
+}
+
+@media screen and (max-width: 320px) {
+	
+}
